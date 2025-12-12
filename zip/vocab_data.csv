@@ -1,0 +1,21 @@
+vocab,vocab_set_id,part_of_speech,meaning,picture,sound,phonetic
+Hello,1,Interjection,"A greeting used when meeting or answering the phone.","","",/həˈloʊ/
+Book,1,Noun,"A set of written or printed pages bound together.","","",/bʊk/
+Run,1,Verb,"Move at a speed faster than walking.","","",/rʌn/
+Happy,1,Adjective,"Feeling or showing pleasure or contentment.","","",/ˈhæpi/
+Analyze,2,Verb,"Examine methodically and in detail.","","",/ˈænəˌlaɪz/
+Hypothesis,2,Noun,"A proposed explanation made on the basis of limited evidence.","","",/haɪˈpɑːθəsɪs/
+Synthesize,2,Verb,"Combine a number of things into a coherent whole.","","",/ˈsɪnθəˌsaɪz/
+Paradigm,2,Noun,"A typical example, pattern, or model.","","",/ˈpærəˌdaɪm/
+Ticket,3,Noun,"A piece of paper or card that gives the holder a right to travel.","","",/ˈtɪkɪt/
+Passport,3,Noun,"An official document issued by a government.","","",/pæspɔːrt/
+Departure,3,Noun,"The action of leaving.","","",/dɪˈpɑːrtʃər/
+Accommodation,3,Noun,"A room, group of rooms, or building in which someone may live or stay.","","",/əˌkɑːməˈdeɪʃən/
+Algorithm,4,Noun,"A process or set of rules to be followed in calculations or problem-solving.","","",/ˈælɡəˌrɪðəm/
+Database,4,Noun,"A structured set of data held in a computer.","","",/ˈdeɪtəˌbeɪs/
+Query,4,Noun,"A question, especially one addressed to an official or an organization.","","",/ˈkwɪri/
+API,4,Noun,"A set of functions and procedures allowing the creation of applications.","","",/ˌeɪ piː ˈaɪ/
+Dinner,5,Noun,"The main meal of the day, taken either around midday or in the evening.","","",/ˈdɪnər/
+Busy,5,Adjective,"Having a great deal to do.","","",/ˈbɪzi/
+Excuse me,5,Interjection,"A polite phrase used to attract attention or apologize.","","",/ɪkˈskjuːs miː/
+Thanks,5,Interjection,"A polite expression used when acknowledging a gift, service, or compliment.","","",/θæŋks/

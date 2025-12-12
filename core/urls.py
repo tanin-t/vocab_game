@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from vocab.views import learn_word, welcome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('welcome/', welcome),
+    path('learn-word/<int:pk>/', learn_word) # learn_word(request, pk=5)
 ]

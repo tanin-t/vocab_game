@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- CSS 3 วิธี -->
+  <!-- 1. Inline -->
+  <!-- 2. Head -->
+  <!-- 3. แยกไฟล์ -->
+</head>
+
+<body>
+  <h1 class="page-title mb-0"><span style="font-size: 40px;">📚</span> English Vocab for Thai</h1>
+  <div style="text-align: center;">แอปเรียนคำศัพท์ภาษาอังกฤษ</div>
+
+  <h2 class="page-title2 mb-0">เลือกเกมฝึกฝน (Choose a game)</h2>
+  <div style="text-align: center;">เลือกเกมที่คุณต้องการเล่น</div>
+
+  <hr style="margin: 30px 0px">
+
+  <div style="display: flex; justify-content: center">
+    <table class="main-table">
+      <tr>
+        <td>
+          <!-- ENG -> THAI -->
+          <div style="display: flex;">
+            <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
+            <div style="display: flex; align-items: center; margin-right: 10px">
+              <img src="https://images.unsplash.com/photo-1761839258753-85d8eecbbc29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="eng-thai">
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-weight: bold;">อังกฤษ > ไทย</div>
+              <div style="color: rgba(0,0,0,0.6)">แปลคำศัพท์จากภาษาอังกฤษเป็นไทย</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <!-- THAI -> ENG -->
+          <div style="display: flex;">
+            <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
+            <div style="display: flex; align-items: center; margin-right: 10px">
+              <img src="images/thai_eng.png" alt="eng-thai">
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-weight: bold;">ไทย -> อังกฤษ</div>
+              <div style="color: rgba(0,0,0,0.6)">แปลคำศัพท์จากไทยเป็นอังกฤษ</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- PIC -> ENG -->
+          <a style="color: black; text-decoration: none;" href="game_pic_eng.html">
+
+            <div style="display: flex;">
+              <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
+              <div style="display: flex; align-items: center; margin-right: 10px">
+                <img src="images/pic_eng.png" alt="eng-thai">
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-weight: bold;">รูปภาพ -> อังกฤษ</div>
+                <div style="color: rgba(0,0,0,0.6)">แปลคำศัพท์จากภาษาอังกฤษเป็นไทย</div>
+              </div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <!-- PIC -> THAI -->
+          <div style="display: flex;">
+              <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
+              <div style="display: flex; align-items: center; margin-right: 10px">
+                <img src="images/pic_thai.png" alt="eng-thai">
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-weight: bold;">อังกฤษ -> ไทย</div>
+                <div style="color: rgba(0,0,0,0.6)">แปลคำศัพท์จากภาษาอังกฤษเป็นไทย</div>
+              </div>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- <button>เรียนรู้คำศัพท์</button> -->
+  <a href="/learn-word/1/">Learn Word</a>
+</body>
+
+</html>
