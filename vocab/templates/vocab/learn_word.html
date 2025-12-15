@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn English</title>
+
+    <style>
+        .main-image {
+            max-height: 250px;
+        }
+    </style>
 </head>
 <body>
     <h1 class="page-title mb-0"><span style="font-size: 40px;">📚</span> English Vocab for Thai</h1>
     <div style="text-align: center;">แอปเรียนคำศัพท์ภาษาอังกฤษ</div>
 
+
+    <img src={{ vocab.picture.url }} class="main-image">
     <div>{{ vocab.id }}</div>
     <div>{{ vocab.vocab }}</div>
     <div>{{ vocab.part_of_speech }}</div>
+    <div>{{ vocab.meaning }}</div>
+
+    <div>
+        {% if vocab_index > 0 %}
+            <a href="/vocab-set/{{ vocab.vocab_set_id }}/vocab/{{ prev_index }}/">back</a>
+        {% endif %}
+
+        {% if vocab_index < total_index %}
+            <a href="/vocab-set/{{ vocab.vocab_set_id }}/vocab/{{ next_index }}/">next</a>
+        {% endif %}
+
+        <br>
+        Words: {{vocab_index}}/{{total_index}}
+    </div>
 </body>
 </html>

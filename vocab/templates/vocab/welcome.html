@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +36,7 @@
           <div style="display: flex;">
             <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
             <div style="display: flex; align-items: center; margin-right: 10px">
-              <img src="https://images.unsplash.com/photo-1761839258753-85d8eecbbc29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="eng-thai">
+              <img src="{% static 'images/eng_thai.png' %}" alt="eng-thai">
             </div>
             <div style="display: flex; flex-direction: column; justify-content: center;">
               <div style="font-weight: bold;">อังกฤษ > ไทย</div>
@@ -47,7 +49,7 @@
           <div style="display: flex;">
             <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
             <div style="display: flex; align-items: center; margin-right: 10px">
-              <img src="images/thai_eng.png" alt="eng-thai">
+              <img src="{% static 'images/thai_eng.png' %}" alt="eng-thai">
             </div>
             <div style="display: flex; flex-direction: column; justify-content: center;">
               <div style="font-weight: bold;">ไทย -> อังกฤษ</div>
@@ -64,7 +66,7 @@
             <div style="display: flex;">
               <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
               <div style="display: flex; align-items: center; margin-right: 10px">
-                <img src="images/pic_eng.png" alt="eng-thai">
+                <img src="{% static 'images/pic_eng.png' %}" alt="eng-thai">
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center;">
                 <div style="font-weight: bold;">รูปภาพ -> อังกฤษ</div>
@@ -78,10 +80,10 @@
           <div style="display: flex;">
               <!-- Block Element กินพื้นที่สุดความกว้างหน้าจอ -->
               <div style="display: flex; align-items: center; margin-right: 10px">
-                <img src="images/pic_thai.png" alt="eng-thai">
+                <img src="{% static 'images/pic_thai.png' %}" alt="eng-thai">
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center;">
-                <div style="font-weight: bold;">อังกฤษ -> ไทย</div>
+                <div style="font-weight: bold;">รูปภาพ -> ไทย</div>
                 <div style="color: rgba(0,0,0,0.6)">แปลคำศัพท์จากภาษาอังกฤษเป็นไทย</div>
               </div>
             </div>

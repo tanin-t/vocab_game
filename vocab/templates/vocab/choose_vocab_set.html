@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Vocab Set</title>
+</head>
+<body>
+    <div style="background-color: chocolate;">
+        {{vocab_sets}}
+    </div>
+
+    <div style="background-color: coral;">
+        {{vocab_sets.0}}
+    </div>
+
+    <div style="background-color: blanchedalmond;">
+        {{vocab_sets.0.name}}
+    </div>
+
+    <hr>
+
+    <ul>
+    {% for vs in vocab_sets %}
+        {% comment %} /vocab-set/<int:vocab_set_id>/vocab/0/ {% endcomment %}
+        <li>
+            <a href="/vocab-set/{{ vs.id }}/vocab/0/">
+                {{ vs.name }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

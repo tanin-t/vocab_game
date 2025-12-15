@@ -18,6 +18,9 @@ class Vocab(models.Model):
     vocab_set = models.ForeignKey(VocabSet, on_delete=models.CASCADE)
     part_of_speech = models.CharField(max_length=20)
     meaning = models.CharField(max_length=200)
-    picture = models.ImageField(upload_to='media/pictures', blank=True)
-    sound = models.FileField(upload_to='media/sounds', blank=True)
+    picture = models.ImageField(upload_to='pictures', blank=True)
+    sound = models.FileField(upload_to='sounds', blank=True)
     phonetic = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.vocab + ' - ' + self.meaning
