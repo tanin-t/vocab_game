@@ -25,6 +25,8 @@
     <div>
         {% if vocab_index > 0 %}
             <a href="/vocab-set/{{ vocab.vocab_set_id }}/vocab/{{ prev_index }}/">back</a>
+        {% else %}
+            <a href="#">back</a>
         {% endif %}
 
         {% if vocab_index < total_index %}
