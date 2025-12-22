@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from vocab.views import learn_word, welcome, choose_vocab_set
+from vocab.views import learn_word, welcome, choose_vocab_set, game_eng_thai, game_eng_thai_answer
+from user.views import login_view
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -27,6 +28,11 @@ urlpatterns = [
     path('welcome/', welcome),
     path('vocab-set/<int:vocab_set_id>/vocab/<int:vocab_index>/', learn_word), # learn_word(request, pk=5)
     path('vocab-set/', choose_vocab_set),
+
+    path('login/', login_view),
+
+    path('game/eng-thai/', game_eng_thai),
+    path('game/eng-thai/answer/', game_eng_thai_answer),
 ]
 
 if settings.DEBUG:

@@ -24,3 +24,10 @@ class Vocab(models.Model):
 
     def __str__(self):
         return self.vocab + ' - ' + self.meaning
+    
+
+class StudentAnswer(models.Model):
+    vocab = models.ForeignKey(Vocab, on_delete=models.PROTECT)
+    student = models.ForeignKey('auth.User', on_delete=models.PROTECT)
+    answer = models.CharField(max_length=200)
+    is_correct = models.BooleanField()

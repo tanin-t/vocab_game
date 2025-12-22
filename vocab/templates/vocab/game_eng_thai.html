@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pic > Eng</title>
+</head>
+<body>
+    <h1>📚 English Vocab for Thai</h1>
+    <p>แอปเรียนคำศัพท์ภาษาอังกฤษ</p>
+
+    <table>
+        <tr>
+            <td>
+                <b><u>เลือกคำศัพท์อังกฤษที่ตรงกับรูปภาพ</u></b>
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                คะแนน 0/5
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                {{ vocab.vocab }}
+            </td>
+        </tr>
+    </table>
+    {% comment %} <button>Adventure</button><br><br>
+    <button>Beatiful</button><br><br>
+    <button>Friend</button><br><br>
+    <button>Delicious</button> {% endcomment %}
+
+    <hr>
+
+    <form action="/game/eng-thai/answer/" method="post">
+        {% csrf_token %}
+
+        <input type="hidden" name="vocab" value="{{vocab.id}}">
+
+        {% for choice in choices %}
+            <label for="answer-{{forloop.counter}}">
+                <input 
+                    id="answer-{{forloop.counter}}" 
+                    type="radio" 
+                    name="answer"
+                    value="{{choice.meaning}}"
+                > {{choice.meaning}}<br>
+            </label>
+        {% endfor %}
+
+        <hr>
+        <button>Answer</button>
+    </form>
+    
+</body>
+</html>
