@@ -31,3 +31,6 @@ class StudentAnswer(models.Model):
     student = models.ForeignKey('auth.User', on_delete=models.PROTECT)
     answer = models.CharField(max_length=200)
     is_correct = models.BooleanField()
+
+    # list of string ["หนังสือ", "ขอบคุณ", "ยุ่ง", "สวัสดี"]
+    choices = models.JSONField(default=list)

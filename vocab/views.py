@@ -69,6 +69,7 @@ def game_eng_thai_answer(request):
     vocab_id = request.POST['vocab']
     vocab = Vocab.objects.get(id=vocab_id)
     answer = request.POST['answer']
+    choices = request.POST.getlist('choices[]')
 
     # save student answer
     sa = StudentAnswer()
@@ -76,7 +77,18 @@ def game_eng_thai_answer(request):
     sa.student = request.user
     sa.is_correct = vocab.meaning == answer
     sa.answer = answer
+    sa.choices = choices
     sa.save()
 
     # show correct / incorrect
-    return HttpResponse("OK")
+    return redirect(f'/game/eng-thai/vocab/{vocab_id}/answer/{sa.id}/')
+
+
+def game_eng_thai_show_answer(request, vocab_id, answer_id):
+    answer = StudentAnswer.objects.get(id=answer_id)
+    vocab = Vocab.objects.get(id=vocab_id)
+
+    return render(request, 'vocab/game_eng_thai_answer.html', {
+        'answer': answer,
+        'vocab': vocab
+    })

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pic > Eng</title>
+</head>
+<body>
+    <h1>📚 English Vocab for Thai</h1>
+    <p>แอปเรียนคำศัพท์ภาษาอังกฤษ</p>
+
+    <table>
+        <tr>
+            <td>
+                <b><u>เลือกคำศัพท์อังกฤษที่ตรงกับรูปภาพ</u></b>
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                คะแนน 0/5
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                {{ vocab.vocab }}
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    {% for choice in answer.choices %}
+    <div style="padding-left: 15px;">
+        {% if choice == vocab.meaning %}
+            ⭕ {{ choice }}
+        {% elif choice == answer.answer and answer.answer != vocab.meaning %}
+            ❌ {{ choice }}
+        {% elif choice != answer.answer %}
+            {{ choice }}
+        {% endif %}
+    </div>
+
+    {% endfor %}
+
+    <a href="/game/eng-thai/">next</a>
+</body>
+</html>

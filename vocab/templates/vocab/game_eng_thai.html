@@ -36,8 +36,9 @@
         {% csrf_token %}
 
         <input type="hidden" name="vocab" value="{{vocab.id}}">
-
         {% for choice in choices %}
+            <input type="hidden" name="choices[]" value="{{choice.meaning}}">
+
             <label for="answer-{{forloop.counter}}">
                 <input 
                     id="answer-{{forloop.counter}}" 

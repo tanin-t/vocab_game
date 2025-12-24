@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from vocab.views import learn_word, welcome, choose_vocab_set, game_eng_thai, game_eng_thai_answer
+from vocab.views import (
+    learn_word, welcome, choose_vocab_set, 
+    game_eng_thai, game_eng_thai_answer,
+    game_eng_thai_show_answer
+)
 from user.views import login_view
 from django.conf.urls.static import static
 from django.conf import settings
@@ -33,6 +37,7 @@ urlpatterns = [
 
     path('game/eng-thai/', game_eng_thai),
     path('game/eng-thai/answer/', game_eng_thai_answer),
+    path('game/eng-thai/vocab/<int:vocab_id>/answer/<int:answer_id>/', game_eng_thai_show_answer),
 ]
 
 if settings.DEBUG:
